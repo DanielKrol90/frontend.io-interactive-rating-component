@@ -39,7 +39,7 @@ main {
 .rating__card .rating__not-selected {
   color: hsl(25deg, 97%, 53%);
 }
-.rating__card h3 {
+.rating__card h1 {
   color: hsl(0deg, 0%, 100%);
   margin-bottom: 1rem;
   font-size: 1.5rem;
