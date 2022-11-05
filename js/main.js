@@ -3,6 +3,7 @@ const submitBtn = document.querySelector('.button__primary');
 const ratingText = document.querySelector('.thanks__rate-value-answer');
 const ratingCard = document.querySelector('.rating__card');
 const thanksCard = document.querySelector('.thanks__card');
+const rateNotSelected = document.querySelector('.rating__not-selected');
 
 let rating;
 
@@ -21,13 +22,16 @@ scoreBtns.forEach((score) => {
 
 //Listens for submit button click, then hides rating card and shows thank you card
 //Also checks to see if the user submitted a rating.  If not, provides a message.
+// If user not submitted a rating, blocks card until rate is selected
 
 
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (!rating) {
-        ratingText.innerHTML = "You forgot to choose a rating, still thanks for trying!";
+        rateNotSelected.innerHTML = "Choose a rating befoce submiting...";
     }
-    ratingCard.style.display = "none";
-    thanksCard.style.display = "flex";
+    if (rating) {
+        ratingCard.style.display = "none";
+        thanksCard.style.display = "flex";
+    }
 });
