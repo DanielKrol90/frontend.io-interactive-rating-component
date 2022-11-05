@@ -7,7 +7,7 @@ const rateNotSelected = document.querySelector('.rating__not-selected');
 
 let value;
 
-//function for loop for each elements, storing the rating and showing the rating on thanks card
+//function for loop for each elements, storing the rating and showing the rating on thanks card, after click it change the color of rate button
 
 btnRate.forEach((rating) => {
     rating.addEventListener('click', (e) => {
