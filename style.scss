@@ -84,6 +84,40 @@ main {
     }
 }
 
+.thanks__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .thanks__phone-img {
+        margin-bottom: 1rem;
+    }
+
+    .thanks__rate-value {
+
+        span {
+            display: flex;
+            margin-bottom: 1rem;
+            color: hsl(25, 97%, 53%);
+
+            .thanks__rate-value-answer {
+                color: hsl(25, 97%, 53%);
+                font-size: 1rem;
+            }
+        }
+    }
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: hsl(0, 0%, 100%);
+    }
+    p {
+        color: hsl(217, 12%, 63%);
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
 .display {
     display: none;
 }

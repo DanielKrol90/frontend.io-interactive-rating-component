@@ -78,6 +78,34 @@ main {
   color: hsl(0deg, 0%, 100%);
 }
 
+.thanks__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thanks__card .thanks__phone-img {
+  margin-bottom: 1rem;
+}
+.thanks__card .thanks__rate-value span {
+  display: flex;
+  margin-bottom: 1rem;
+  color: hsl(25deg, 97%, 53%);
+}
+.thanks__card .thanks__rate-value span .thanks__rate-value-answer {
+  color: hsl(25deg, 97%, 53%);
+  font-size: 1rem;
+}
+.thanks__card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.thanks__card p {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 .display {
   display: none;
 }/*# sourceMappingURL=style.css.map */
