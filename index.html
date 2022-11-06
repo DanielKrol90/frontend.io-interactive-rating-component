@@ -8,6 +8,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <title>Frontend Mentor | Interactive rating component</title>
   <link rel="stylesheet" href="./css/style.css">
 
@@ -17,52 +19,61 @@
 
 
   <main>
-    <article class="rating__card">
-      <!-- Rating state start -->
-      <div class="rating__star-img">
-        <img src="./images/icon-star.svg" alt="orange star">
-      </div>
+    <div class="container">
+      <article class="rating__card">
 
-      <h1>How did we do?</h1>
-      <p>Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!</p>
-      <span class="rating__not-selected"></span>
+        <button class="button__secondary home hidden">
+          <i class="fa-solid fa-angles-left"></i>Back
+        </button>
 
-      <div class="rating__card-scores">
-        <button class="button__secondary">1</button>
-        <button class="button__secondary">2</button>
-        <button class="button__secondary">3</button>
-        <button class="button__secondary">4</button>
-        <button class="button__secondary">5</button>
-      </div>
+        <div class="rating__star-img">
+          <img src="./images/icon-star.svg" alt="orange star">
+        </div>
 
-      <button class="button__primary">Submit</button>
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+        <span class="error">
+          <p>
+            Please Click on the rating
+          </p>
+        </span>
 
-    </article>
+        <div class="rating__card-scores">
+          <button class="button__secondary" data-id="1">1</button>
+          <button class="button__secondary" data-id="2">2</button>
+          <button class="button__secondary" data-id="3">3</button>
+          <button class="button__secondary" data-id="4">4</button>
+          <button class="button__secondary" data-id="5">5</button>
+        </div>
 
+        <button class="button__primary">Submit</button>
 
-    <article class="thanks__card display">
-
-      <div class="thanks__phone-img">
-        <img src="./images/illustration-thank-you.svg" alt="mobile phone showing rate is send">
-      </div>
-
-      <div class="thanks__rate-value">
-        <p class="thanks__rate-value-answer"></p>
-      </div>
-
-      <h3>
-        Thank you!
-      </h3>
-
-      <p>
-        We appreciate you taking the time to give a rating. If you ever need more support,
-        don’t hesitate to get in touch!
-      </p>
+      </article>
 
 
-    </article>
+      <article class="thanks__card hidden">
 
+        <div class="thanks__phone-img">
+          <img src="./images/illustration-thank-you.svg" alt="mobile phone showing rate is send">
+        </div>
+
+        <div class="thanks__rate-value">
+          <p class="thanks__rate-value-answer"></p>
+        </div>
+
+        <h3>
+          Thank you!
+        </h3>
+
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+
+
+      </article>
+    </div>
 
   </main>
 

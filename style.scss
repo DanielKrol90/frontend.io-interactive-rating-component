@@ -1,3 +1,17 @@
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-grey: hsl(217, 12%, 63%);
+    --color-medium-grey: hsl(217, 11%, 31%);
+    --color-dark-blue: hsl(213, 19%, 18%);
+    --color-Orange: hsl(25, 97%, 53%);
+    --color-very-dark-blue: hsl(216, 12%, 8%);
+    --color-light-blue: hsl(214, 19%, 22%);
+  
+    --transition: all 0.3s linear;
+    --transition-slow: transform 0.5s ease-in-out;
+    --radius: 0.5rem;
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -6,14 +20,14 @@
 }
 
 body {
-    background-color: hsl(216, 12%, 8%);
+    background-color: var(--color-very-dark-blue);
     font-family: 'Overpass', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main {
+.container {
     background-color: hsl(213, 19%, 18%);
     height: 400px;
     width: 400px;
@@ -23,9 +37,10 @@ main {
 }
 
 .rating__card {
+    position: relative;
     
     .rating__star-img {
-        background-color: hsl(203, 20%,32%);
+        background-color: var(--color-medium-grey);
         height: 2.5rem;
         width: 2.5rem;
         border-radius: 50%;
@@ -39,18 +54,18 @@ main {
             width: 1rem;
         }
     }
-    .rating__not-selected {
-        color: hsl(25, 97%, 53%);
+    .rating__error {
+        color: var(--color-Orange)
     }
 
     h1 {
-        color:  hsl(0, 0%, 100%);
+        color:  var(--color-white);
         margin-bottom: 1rem;
         font-size: 1.5rem;
     }
 
     p {
-        color: hsl(217, 12%, 63%);
+        color: var(--color-light-grey);
         margin-bottom: 0.6rem;
         font-size: 0.8rem;
     }
@@ -61,24 +76,43 @@ main {
         justify-content: space-between;
         margin-top: 1rem;
     }
+    .error {
+        position: absolute;
+        left: 30%;
+        top: 0rem;
+        border-radius: 10px;
+        padding: 0.5rem;
+        font-weight: 700;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+            p {
+                margin: 0;
+                color: rgb(246, 8, 8);
+            }
+      }
+      .error-active {
+        opacity: 1;
+        animation: apple 0.5s normal ease-in-out;
+      }
 }
 
 .button__primary {
-    background-color: hsl(25, 97%, 53%);
-    color: hsl(0, 0%, 100%);
+    background-color: var(--color-Orange);
+    color: var(--color-white);
     width: 100%;
     height: 2rem;
     border-radius: 20px;
     text-transform: uppercase;
 
     &:hover {
-        background-color: hsl(0, 0%, 100%);
-        color: hsl(25, 97%, 53%);
+        background-color: var(--color-white);
+        color: var(--color-Orange);
+        transition: var(--transition);
     }
 }
 
 .button__secondary {
-    background-color: hsl(203, 20%,32%);
+    background-color: var(--color-medium-grey);
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
@@ -86,13 +120,24 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    color: hsl(217, 12%, 63%);
+    color: var(--color-light-grey);
+    
 
     &:hover {
-        background-color: hsl(25, 97%, 53%);
-        color: hsl(0, 0%, 100%);
+        background-color: var(--color-light-grey);
+        color: var(--color-white);
+        transition: var(--transition);
+    }
+    &:focus {
+        background-color: var(--color-Orange);
+        color: var(--color-white);
     }
 }
+
+.btn-active {
+    background-color: var(--color-Orange);
+    color: var(--color-white);
+  }
 
 .thanks__card {
     display: flex;
@@ -106,7 +151,7 @@ main {
     .thanks__rate-value {
 
             p {
-                color: hsl(25, 97%, 53%);
+                color: var(--color-Orange);
                 font-size: 1rem;
             }
         }
@@ -114,15 +159,28 @@ main {
     h3 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: hsl(0, 0%, 100%);
+        color: var(--color-white);
     }
     p {
-        color: hsl(217, 12%, 63%);
+        color: var(--color-light-grey);
         font-size: 0.8rem;
         text-align: center;
     }
 }
 
-.display {
+.home {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--color-Orange);
+    border-radius: var(--radius);
+    width: 3.5rem;
+
+        &:hover {
+            background-color: var(--color-Orange);
+        }
+  }
+
+.hidden {
     display: none;
 }
