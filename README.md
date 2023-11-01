@@ -1,9 +1,7 @@
 # Frontend Mentor - Interactive rating component
 
-LINK :
-<li>
-    <a href="https://danielkrol90.github.io/frontend.io-interactive-rating-component/)"> SEE IT</a>
-</li>
+LINK : <a href="https://danielkrol90.github.io/frontend.io-interactive-rating-component"> SEE IT</a>
+
 
 ![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
 
